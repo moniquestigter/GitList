@@ -1,9 +1,23 @@
-h1{
-    color: rosybrown;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.header {
+    overflow: hidden;
+    background-color: gray;
+    padding: 20px 10px;
+    box-shadow: 0 0 40px 0 lightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-h2{
-    color: cadetblue;
-    font-family: 'Courier New', Courier, monospace;
-}
+  
+  .header p {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    padding-left: 70px;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header p.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
