@@ -16,12 +16,15 @@ module.exports = {
     reasons: true,
     chunks: false
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        loader: "babel-loader"
-      }
+      {test: /\.js$/ , loader:'babel-loader', exclude: '/node_modules/'},
+      {test: /\.jsx$/ , loader:'babel-loader', exclude: '/node_modules/'}
     ]
   },
   mode: "development"

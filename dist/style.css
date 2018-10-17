@@ -25,6 +25,35 @@
 - Media Queries
 */
 
+/* SEARCH BAR */
+.search input[type=text] {
+  float: right;
+  padding: 6px;
+  border-radius: 25px;
+  border-color:  #E7EFF4;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 13px;
+  width: 4in;
+  background-color: #E7EFF4;
+  font-weight: bold;
+  color:#D7D0C6;
+  position:absolute;
+  left: 30%;
+  top: 100px;
+}
+
+.fa{
+  color:green;
+  font-size: 35px;
+  position: absolute;
+  left: 66%;
+  bottom:1px;
+  top: 110px;
+}
+
+/* HEADER */
+
 .header {
   overflow: hidden;
   background-color: #373636;
@@ -148,7 +177,9 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: #222; 
+  margin: 0;
+}
 
 
 /* Typography
