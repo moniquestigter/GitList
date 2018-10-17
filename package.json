@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet",
+    "lint": "eslint '**/*.{js,jsx}' --quiet",
     "build": "webpack",
     "watch": "webpack --watch"
   },
@@ -18,10 +18,15 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.11.1"
   }
 }
