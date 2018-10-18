@@ -34,15 +34,31 @@
   margin-top: 8px;
   margin-right: 16px;
   font-size: 13px;
-  width: 4in;
+  width: 40%;
   background-color: #E7EFF4;
   font-weight: bold;
-  color:#D7D0C6;
+  color:gray;
   position:absolute;
   left: 30%;
   top: 100px;
 }
+.search{
+  overflow: auto;
+  margin: 0;
+  align-self: auto;
+  cursor: pointer;
+}
 
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	{}
+	.search
+	{
+		width: 95%;
+		margin: 0 auto;
+	}
+
+}
 .fa{
   color:green;
   font-size: 35px;
