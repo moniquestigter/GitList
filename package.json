@@ -32,9 +32,11 @@
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "prop-types": "^15.6.2",
     "react-responsive": "^5.0.0",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "yarn": "^1.10.1"
   }
 }

@@ -361,6 +361,10 @@ ol ul {
 li {
   margin-bottom: 1rem; }
 
+.list {
+  font-size: 15px;
+  margin-bottom: .5rem;
+}
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

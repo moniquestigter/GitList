@@ -1,3 +1,4 @@
+//componente funcional
 import React from 'react';
 
 const Header = () => {
