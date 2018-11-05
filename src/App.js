@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Search from './Search'; // Importamos componente Search
 import { BrowserRouter, Route } from 'react-router-dom';
 import ListProjects from './ListProjects';
+import Details from './Details';
 
 const App = () => {
   return (
@@ -22,6 +23,11 @@ const App = () => {
       exact
       path="/:username/projects"
       component={ListProjects}
+      />
+      <Route 
+      exact
+      path="/:username/project/:id/:name"
+      component={Details}
       />
     </div>
       

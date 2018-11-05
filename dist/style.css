@@ -244,6 +244,11 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
+  button,
+  input[type="back"] {
+    color: black;
+    left: -30px;
+  }
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -278,6 +283,7 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
+
 
 
 /* Forms
@@ -346,7 +352,10 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: circle inside;
+text-align: center;
+
+  }
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -360,11 +369,18 @@ ol ul {
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
+ul:hover {
+  background-color: lightgreen;
+  border: solid;
+  border-width: 1px;
+}
 
 .list {
   font-size: 15px;
   margin-bottom: .5rem;
 }
+a.nounderline {text-decoration: none; }
+
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
