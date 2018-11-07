@@ -6,6 +6,20 @@ import ListProjects from './ListProjects';
 import Details from './Details';
 
 const App = () => {
+
+  const handlePressProject = (history, username, id, name) => {
+    if(username && id){
+      history.push(`/${username}/project/${id}/${name}`);
+    }
+  }
+
+  const goBack = (history, username) => {
+    if(username)
+      history.push(`/${username}/projects`);
+    else
+      history.push("/");
+  }
+
   return (
     <BrowserRouter>
     <div>
@@ -20,15 +34,26 @@ const App = () => {
         />
       )} />
       <Route 
-      exact
-      path="/:username/projects"
-      component={ListProjects}
-      />
+          exact 
+          path="/:username/projects" 
+          render={({ match, history }) => (
+          <ListProjects
+            match = {match}
+            history = {history}
+            handlePressProject = {handlePressProject}
+            goBack = {goBack}
+          />
+        )}/>
       <Route 
       exact
       path="/:username/project/:id/:name"
-      component={Details}
-      />
+      render={({ match, history }) => (
+        <Details
+          match = {match}
+          history = {history}
+          goBack = {goBack}
+        />
+      )}/>
     </div>
       
     </BrowserRouter>

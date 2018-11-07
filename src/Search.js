@@ -12,7 +12,7 @@ const Search = ({ onSubmitUsername }) => {
   };
   return (
     <div>
-      <Header headerVal="Github Demo Projects"/>
+      <Header headerVal="Github Demo Projects" visible={false}/>
       <div className="container">
         <section className="search six offset-by-three columns">
           <form onSubmit={handleSubmit}>

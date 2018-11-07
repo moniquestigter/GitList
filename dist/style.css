@@ -241,7 +241,7 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 0px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
   button,
@@ -372,7 +372,7 @@ li {
 ul:hover {
   background-color: lightgreen;
   border: solid;
-  border-width: 1px;
+  border-width: 0.25px;
 }
 
 .list {
