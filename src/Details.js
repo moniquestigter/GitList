@@ -17,28 +17,29 @@ class Details extends Component { //herencia
     componentDidMount(){ //llamados al backend
         const {match: { params }} = this.props;
         axios.get(`https://api.github.com/repos/${params.username}/${params.name}/readme`)
-        .then(data => this.setState(() => ({ //despues de que se conecto al servidor, obtenemos los datos
-            info: data.data, //projects.data es un array, esto es de axios
-            headerVal: params.name,
-            username: params.username
-        }))
+        .then(data => { //despues de que se conecto al servidor, obtenemos los datos
+            var dwnld = data.data.download_url
+            axios.get(`${dwnld}`)
+            .then(info => this.setState(() => ({ //despues de que se conecto al servidor, obtenemos los datos
+                actualInfo: info.data, //projects.data es un array, esto es de axios
+                headerVal: params.name,
+                username: params.username,
+            })) //IMPRIMIR TODAS LAS INFOS A VER QUE VIENE
+            ).catch(err => console.log(err.message)) //eslint-disable-line
+        } //IMPRIMIR TODAS LAS INFOS A VER QUE VIENE
         ).catch(err => console.log(err.message)); //eslint-disable-line
-        var enc = window.btoa(this.state.info.content);
-        console.log("ENC: " + enc);
-        var getActualInfo = window.atob(enc);
-        console.log("ACTUAL: " + getActualInfo);
-        if(getActualInfo == "undefined"){
+        console.log("ACTUAL: " + this.state.actualInfo)
+        if(this.state.actualInfo == ""){
             this.setState(() => ({
-                actualInfo: "NO Existe README"
-            }));
-        } else{
-            this.setState(() => ({
-                actualInfo: getActualInfo
-            }));
+                actualInfo: "No existe README.md para este proyecto",
+                headerVal: params.name,
+                username: params.username,
+            })) 
         }
-
-        
+    
     }
+
+    
 
     goBack(e){
         e.preventDefault();
